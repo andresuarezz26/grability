@@ -1,15 +1,18 @@
 package api.interfaces;
 
-import api.models.MyPojo;
+import api.models.Feed;
 import retrofit.http.GET;
-import retrofit.Call;
 
 /**
- * Created by gerardosuarez on 11/12/16.
+ * Created by gerardosuarez
+ * Interface that implements the methods to query the iTunes Apps API
  */
 public interface ITunesAPI
 {
-    @GET(".")
-    Call<MyPojo> loadApps();
-
+    /**
+     * Get the Feed that contains the List of Entries
+     * @return
+     */
+    @GET("limit=20/json")
+    Feed loadFeed();
 }

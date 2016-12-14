@@ -176,4 +176,12 @@ public class Feed {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        String temp= "";
+        for (int i = 0; i < entry.size(); i++) {
+            temp = entry.get(i).toString();
+        }
+        return temp + "size: "+ entry.size();
+    }
 }
