@@ -4,7 +4,7 @@ package api.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Attributes______ {
+public class AttributesCategory {
 
     @SerializedName("im:id")
     @Expose
@@ -91,4 +91,19 @@ public class Attributes______ {
         this.label = label;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AttributesCategory that = (AttributesCategory) o;
+
+        return imId != null ? imId.equals(that.imId) : that.imId == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return imId != null ? imId.hashCode() : 0;
+    }
 }

@@ -27,7 +27,6 @@ public class ApiManager
 
     private final String TAG = ApiManager.class.getSimpleName();
 
-
     /**
      * ApiManager constructor that initialize the context,bus and the ApiClient classes
      * @param context

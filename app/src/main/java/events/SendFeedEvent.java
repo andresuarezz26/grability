@@ -14,7 +14,7 @@ public class SendFeedEvent
         this.mFeed = mFeed;
     }
 
-    public Feed getmFeed()
+    public Feed getFeed()
     {
         return mFeed;
     }

@@ -8,14 +8,14 @@ public class Category {
 
     @SerializedName("attributes")
     @Expose
-    private Attributes______ attributes;
+    private AttributesCategory attributes;
 
     /**
      * 
      * @return
      *     The attributes
      */
-    public Attributes______ getAttributes() {
+    public AttributesCategory getAttributes() {
         return attributes;
     }
 
@@ -24,8 +24,23 @@ public class Category {
      * @param attributes
      *     The attributes
      */
-    public void setAttributes(Attributes______ attributes) {
+    public void setAttributes(AttributesCategory attributes) {
         this.attributes = attributes;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Category category = (Category) o;
+
+        return attributes != null ? attributes.equals(category.attributes) : category.attributes == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return attributes != null ? attributes.hashCode() : 0;
+    }
 }

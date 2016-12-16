@@ -6,6 +6,7 @@ import com.squareup.otto.Bus;
 
 import bus.BusProvider;
 import manager.ApiManager;
+import utils.SnackbarMsg;
 
 /**
  * Created by gerardosuarez on 13/12/16.
